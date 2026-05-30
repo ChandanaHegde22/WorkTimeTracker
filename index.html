@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manager Work Hour Tracker</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Manager Work Hour Tracker</h1>
+
+    <div class="card">
+        <input type="text" id="managerName" placeholder="Manager Name">
+        <input type="text" id="task" placeholder="Task / Work Description">
+
+        <h2 id="timer">00:00:00</h2>
+
+        <button onclick="startTimer()">Start</button>
+        <button onclick="stopTimer()">Stop & Save</button>
+        <button onclick="resetTimer()">Reset</button>
+
+        <br><br>
+        <a href="/export">
+            <button>Export to Spreadsheet</button>
+        </a>
+    </div>
+
+    <h2>Work Sessions</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Task</th>
+                <th>Start</th>
+                <th>End</th>
+                <th>Duration</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody id="sessionTable"></tbody>
+    </table>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
